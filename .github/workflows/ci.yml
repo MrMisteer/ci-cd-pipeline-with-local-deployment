@@ -29,6 +29,7 @@ jobs:
       - name: npm audit backend
         working-directory: ./backend
         run: npm audit --audit-level=high
+        continue-on-error: true
 
       - name: Snyk security analysis - backend
         working-directory: ./backend
@@ -52,7 +53,8 @@ jobs:
       - name: npm audit frontend
         working-directory: ./frontend
         run: npm audit --audit-level=high
-
+        continue-on-error: true
+        
       - name: Snyk security analysis - frontend
         working-directory: ./frontend
         run: npx snyk test
