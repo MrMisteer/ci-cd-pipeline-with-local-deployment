@@ -1,11 +1,12 @@
 services:
   backend:
-    image: khintervenant/ci-cd-testing-deploy:backend
+    image: mrmisteer/backend:latest
     ports:
       - "3001:3001"
 
   frontend:
-    image: khintervenant/ci-cd-testing-deploy:frontend
+    image: mrmisteer/frontend:latest
     ports:
       - "3000:3000"
+  
 
